@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "rootDir": "./src/",
-    "outDir": "./dist/",
-    "strict": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "experimentalDecorators": true,
+    "module": "commonjs",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
-    "removeComments": true,
-    "typeRoots": ["node_modules/@types"],
-    "sourceMap": false,
-    "baseUrl": "./"
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "paths": {
+      "@PollenBot/*": ["src/*"]
+    }
   },
-  "files": ["src/bot.ts"],
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["src", "**/*.ts"],
+  "exclude": ["node_modules", "build"]
 }

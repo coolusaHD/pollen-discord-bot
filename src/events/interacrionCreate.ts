@@ -1,5 +1,5 @@
+import { Commands } from '@PollenBot/commands/allCommands';
 import { Client, CommandInteraction, Interaction } from 'discord.js';
-import { Commands } from 'src/commands/commands';
 
 export const interactionCreate = (client: Client): void => {
   client.on('interactionCreate', async (interaction: Interaction) => {
